@@ -14,6 +14,15 @@ class PartiesController < ApplicationController
     end
   end
 
+  def create
+    @party = Party.new(user: current_user)
+    if @party.save
+      redirect_to party_path(@party)
+    else
+      render "parties/show"
+    end
+  end
+
   private
   def win?(moves)
     return true if moves.select { |n| [1,2,3].include?(n)}.length == 3
