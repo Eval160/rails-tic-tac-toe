@@ -1,0 +1,30 @@
+<div class="container">
+
+  <h1>New party - Tic Tac Toe</h1>
+  <p><%= @moves %></p>
+  <p><%= @test %></p>
+  <table>
+    <tbody>
+        <tr>
+          <td <%= "class=played" if @moves.include?(1) %> ><%= link_to "  ", party_moves_path(@party, cell_id: "1"), method: :post %></td>
+          <td <%= "class=played" if @moves.include?(2) %> ><%= link_to "  ", party_moves_path(@party, cell_id: "2"), method: :post %></td>
+          <td <%= "class=played" if @moves.include?(3) %> ><%= link_to "  ", party_moves_path(@party, cell_id: "3"), method: :post %></td>
+        </tr>
+
+        <tr>
+          <td <%= "class=played" if @moves.include?(4) %> ><%= link_to "  ", party_moves_path(@party, cell_id: "4"), method: :post %></td>
+          <td <%= "class=played" if @moves.include?(5) %> ><%= link_to "  ", party_moves_path(@party, cell_id: "5"), method: :post %></td>
+          <td <%= "class=played" if @moves.include?(6) %> ><%= link_to "  ", party_moves_path(@party, cell_id: "6"), method: :post %></td>
+        </tr>
+
+        <tr>
+          <td <%= "class=played" if @moves.include?(7) %> ><%= link_to "  ", party_moves_path(@party, cell_id: "7"), method: :post %></td>
+          <td <%= "class=played" if @moves.include?(8) %> ><%= link_to "  ", party_moves_path(@party, cell_id: "8"), method: :post %></td>
+          <td <%= "class=played" if @moves.include?(9) %> ><%= link_to "  ", party_moves_path(@party, cell_id: "9"), method: :post %></td>
+        </tr>
+    </tbody>
+
+  </table>
+
+
+</div>
