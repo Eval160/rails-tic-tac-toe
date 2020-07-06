@@ -10,9 +10,7 @@ class PartiesController < ApplicationController
       @moves << move.cell_id
     end
     if win?(@moves)
-      @test = "gagné"
-    else
-      @test = "perdu"
+      @text = "Bravo, tu as gagné!"
     end
   end
 
